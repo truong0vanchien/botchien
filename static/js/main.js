@@ -292,13 +292,13 @@ if (submitButton) {
           try {
             const parsedJson = JSON.parse(rawContent);
             if (parsedJson && typeof parsedJson === 'object' && parsedJson.response !== undefined) {
-              answerOutput.textContent = parsedJson.response;
+              answerOutput.innerHTML = marked.parse(parsedJson.response);
             } else {
-              answerOutput.textContent = JSON.stringify(parsedJson, null, 2);
+              answerOutput.innerHTML = marked.parse("```json\n" + JSON.stringify(parsedJson, null, 2) + "\n```");
             }
           } catch (e) {
-            // Show raw string if parsing fails
-            answerOutput.textContent = rawContent;
+            // Show raw string parsed as markdown if parsing fails
+            answerOutput.innerHTML = marked.parse(rawContent);
           }
         } else {
           answerOutput.textContent = 'Could not retrieve answer.';
