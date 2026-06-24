@@ -1,0 +1,72 @@
+{% extends "base.jinja" %}
+
+{% block body %}
+<div class="container-fluid px-4 mt-4">
+<div class="d-flex justify-content-between align-items-center mb-4">
+<div style="width: 150px;">
+</div>
+<h2 class="mb-0 text-center flex-grow-1 fw-bold" data-i18n="Ask me anything about Truong Van Chien">Ask me anything about Truong Van Chien</h2>
+<div style="width: 150px;" class="text-end">
+<select id="langSelect" class="form-select form-select-lg d-inline-block fw-bold border-primary shadow-sm" style="width: auto; min-width: 90px; cursor: pointer;">
+<option value="vi">VI</option>
+<option value="en">EN</option>
+</select>
+</div>
+</div>
+
+<!-- SUBJECT (Hidden) -->
+<select id="subjectInput" style="display: none;">
+<option value="asky" selected>asky</option>
+</select>
+
+<!-- TWO COLUMNS -->
+<div class="row">
+<!-- COLUMN 1: DEFINITION & TRAINING -->
+<div class="col-md-6 mb-4">
+<!-- DEFINITION -->
+<div class="card p-4 mb-4 shadow-sm h-100 d-flex flex-column" style="min-height: 250px;">
+<label for="definitionInput" class="form-label text-label fw-bold" data-i18n="DEFINITION">DEFINITION</label>
+<textarea class="form-control mb-2 flex-grow-1" id="definitionInput" rows="5" placeholder="Definition will be loaded from Supabase..." data-i18n-placeholder="Definition will be loaded from Supabase..."></textarea>
+<div class="text-end mt-auto">
+<button type="button" class="btn btn-warning btn-sm" id="btnOverwriteDef" data-i18n="OVERWRITE DEFINITION">OVERWRITE DEFINITION</button>
+</div>
+</div>
+</div>
+
+<!-- COLUMN 2: QUESTION -->
+<div class="col-md-6 mb-4">
+<div class="card p-4 shadow-sm h-100 d-flex flex-column" style="min-height: 250px;">
+<label for="contentInput" class="form-label text-label fw-bold" data-i18n="QUESTION">QUESTION</label>
+<textarea class="form-control flex-grow-1" id="contentInput" rows="5" placeholder="E.g., What is your current role? / What is your core tech stack? / Tell me about the Conveyor Belt 3D Printer project. / What certificates do you have?" data-i18n-placeholder="E.g., What is your current role? / What is your core tech stack? / Tell me about the Conveyor Belt 3D Printer project. / What certificates do you have?"></textarea>
+</div>
+</div>
+</div>
+
+<div class="row">
+<!-- COLUMN 1: TRAINING -->
+<div class="col-md-6 mb-4">
+<div class="card p-4 shadow-sm h-100 d-flex flex-column" style="min-height: 400px;">
+<label for="trainingInput" class="form-label text-label fw-bold" data-i18n="TRAINING">TRAINING</label>
+<textarea class="form-control mb-2 flex-grow-1" id="trainingInput" rows="12" placeholder="Training data will be loaded from Supabase..." data-i18n-placeholder="Training data will be loaded from Supabase..."></textarea>
+<div class="text-end mt-auto">
+<button type="button" class="btn btn-warning btn-sm" id="btnOverwriteTrain" data-i18n="OVERWRITE TRAINING">OVERWRITE TRAINING</button>
+</div>
+</div>
+</div>
+
+<!-- COLUMN 2: ANSWER & SUBMIT -->
+<div class="col-md-6 mb-4">
+<div class="card p-4 shadow-sm h-100 d-flex flex-column" style="min-height: 400px;">
+<label for="answerOutput" class="form-label text-label fw-bold" data-i18n="ANSWER">ANSWER</label>
+<pre id="answerOutput" class="form-control flex-grow-1 mb-3" style="min-height: 220px; background-color: #f8f9fa; font-family: monospace; white-space: pre-wrap; overflow-y: auto;"></pre>
+
+<div class="text-center mt-auto">
+<button type="submit" class="btn btn-primary submit-button btn-lg w-100" data-i18n="SUBMIT">SUBMIT</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% include 'frmLoading.jinja' %}
+{% endblock body %}

@@ -1,0 +1,52 @@
+#answerOutput table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#answerOutput th,
+#answerOutput td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+#answerOutput th {
+    text-align: left;
+}
+
+#answerOutput pre {
+    white-space: pre-wrap; /* This helps with wrapping long lines while preserving spaces */
+    word-wrap: break-word;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+#loadingIndicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Align text to the center */
+    z-index: 1050; /* Ensure it's above other content, similar to Bootstrap modals */
+    padding-top: 250px; /* Add top padding to shift content down */
+}
+
+#loadingIndicator .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    margin-top: 2rem; /* Add top margin */
+}
+
+#loadingIndicator div {
+    text-align: center;
+}

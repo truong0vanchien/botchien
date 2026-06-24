@@ -1,0 +1,60 @@
+[PERSONAL OVERVIEW]
+- Name: Truong Van Chien[cite: 1]
+- Title: Digital Transformation & AI Automation Consultant[cite: 1]
+- Location: Ho Chi Minh City, Vietnam[cite: 1]
+- Contact Email: truong.vanchien@gmail.com[cite: 1]
+- Contact Phone: +84 965150797[cite: 1]
+- LinkedIn: https://www.linkedin.com/in/truongvanchien[cite: 1]
+- GitHub: https://github.com/truong0vanchien[cite: 1]
+- Core Pitch: Chien is an expert in solving complex business bottlenecks through intelligent technology, specializing in designing and integrating AI Agents, Large Language Models (LLMs), and automated workflows (n8n, Python) into enterprise operations and customer care[cite: 1].
+
+[CORE COMPETENCIES & TECH STACK]
+- Programming & Back-End: Python, TypeScript, SQL, PostgreSQL, MongoDB, Flask, FastAPI, Next.js, JavaScript[cite: 1].
+- AI, Machine Learning & Vision: LLMs, Generative AI integration, YOLOv8, Computer Vision[cite: 1].
+- Automation & Embedded Systems: IoT Technology, Raspberry Pi, Embedded Programming, 3D Printing hardware automation, Power Automate, UiPath, VBA/Excel Macros[cite: 1].
+- Marketing & Digital Analytics: Google Tag Manager (GTM), Adobe Analytics, Adobe Data Collection[cite: 1].
+- Management & Methodology: Agile/Scrum, Product Owner, Business Analyst, Project Management, Jira/Confluence[cite: 1].
+- Languages: Vietnamese (Native), English (Highly Proficient / 7.5 IELTS)[cite: 1].
+
+[WORK EXPERIENCE SUMMARY]
+1. Concentrix Catalyst (Dec 2024 - Present) | Digital Analyst
+- Engineered and managed advanced tracking systems on the Samsung E-commerce platform using Google Tag Manager (GTM) and Adobe Experience Platform Launch[cite: 1].
+- Analyzed user journeys via Adobe Analytics to eliminate conversion bottlenecks[cite: 1].
+- Deployed optimized source code and custom JavaScript tags, reducing page load times by 15% and improving tracking accuracy[cite: 1].
+
+2. SEPRINDER (Jan 2021 - Present) | Co-Founder & Product Owner
+- Headed an innovative 3D printing ecosystem and automation platform, scaling adoption to over 300 users and driving 150+ workshops[cite: 1].
+- Built virtual full-stack applications using Next.js, Flask, and WebSockets to orchestrate 3D printing jobs end-to-end[cite: 1].
+- Architected cloud-to-machine automation workflows using Docker and VPS deployment, reducing manual operations[cite: 1].
+
+3. DHL Global Forwarding (Jun 2019 - Oct 2020) | Business Analyst
+- Acted as the key bridge between business stakeholders and software development teams to capture and translate technical requirements[cite: 1].
+- Analyzed operational workflows to propose and implement data-driven automation solutions, eliminating operational process waste[cite: 1].
+
+4. Previous Roles:
+- KPMG Vietnam (2019): Admin Intern managing end-to-end physical and digital correspondence distribution workflows for the Audit department[cite: 1].
+- Se Bao Tap (2018): Product Owner managing student-targeted digital marketing campaigns and web-platform product features[cite: 1].
+- Topdev.vn (2017): Marketing Intern tracking and analyzing performance metrics (CTR, conversion rates) utilizing Excel to optimize recruitment campaigns[cite: 1].
+
+[KEY PROJECTS & INTELLECTUAL PROPERTY]
+1. Patent Application: Conveyor Belt 3D Printer (Intellectual Property Office of Viet Nam)
+- Authored a patent application for a continuous, automated conveyor belt 3D printer[cite: 1].
+- Developed the integration of embedded systems and IoT architectures to enable real-time remote hardware monitoring and cloud-to-printer API communication frameworks[cite: 1].
+- Tech used: Raspberry Pi, WebSockets, MQTT, Cloud API Integration[cite: 1].
+
+2. Project: AI Detection for 3D Printing Failures
+- Developed and delivered a YOLOv8-based computer vision system to detect real-time 3D printing failures[cite: 1].
+- Successfully achieved 80% detection accuracy[cite: 1].
+- Deployed the lightweight model on a Raspberry Pi 3B+ equipped with a Pi Camera for edge-based monitoring[cite: 1].
+
+3. Project: VBA Enterprise Automation
+- Developed an "IELTS Suite" VBA tool to manage and track student essays[cite: 1].
+- Created a "PowerPoint Giphy" macro to automate presentation animations[cite: 1].
+
+[HONORS, AWARDS & CERTIFICATIONS]
+- DHL Global Forwarding Merit: Earned multiple prestigious GEM (Going the Extra Mile) Awards for outstanding quarterly performance and exceptional customer satisfaction ratings[cite: 1].
+- LinkedIn Learning AI Certifications: Holds 25+ credentials categorized into:
+* AI Strategy & Governance (AI Leadership, Corporate AI Strategy, AI Ethics)[cite: 1].
+* Workplace Productivity (Advanced Prompt Engineering, Microsoft 365 Copilot, AI-driven Excel Analysis)[cite: 1].
+* AI-Powered Operations (GenAI for customer service management, Sales enablement, Customer Journey Mapping)[cite: 1].
+- Education: Bachelor in Air Freight Management from the Vietnam Aviation Academy[cite: 1].
