@@ -1,12 +1,32 @@
 const subjectSelect = document.getElementById('subjectInput');
 const definitionInput = document.getElementById('definitionInput');
 const trainingInput = document.getElementById('trainingInput');
+const btnEditDef = document.getElementById('btnEditDef');
+const btnCancelDef = document.getElementById('btnCancelDef');
+const groupDefActions = document.getElementById('groupDefActions');
 const btnOverwriteDef = document.getElementById('btnOverwriteDef');
+const btnEditTrain = document.getElementById('btnEditTrain');
+const btnCancelTrain = document.getElementById('btnCancelTrain');
+const groupTrainActions = document.getElementById('groupTrainActions');
 const btnOverwriteTrain = document.getElementById('btnOverwriteTrain');
 const contentInput = document.getElementById('contentInput');
 const submitButton = document.querySelector('.submit-button');
 const loadingIndicator = document.getElementById('loadingIndicator');
 const answerOutput = document.getElementById('answerOutput');
+
+function resetEditState(type) {
+  if (type === 'definition') {
+    definitionInput.disabled = true;
+    definitionInput.removeAttribute('data-original-val');
+    if (btnEditDef) btnEditDef.classList.remove('d-none');
+    if (groupDefActions) groupDefActions.classList.add('d-none');
+  } else if (type === 'training') {
+    trainingInput.disabled = true;
+    trainingInput.removeAttribute('data-original-val');
+    if (btnEditTrain) btnEditTrain.classList.remove('d-none');
+    if (groupTrainActions) groupTrainActions.classList.add('d-none');
+  }
+}
 
 // Bilingual dictionary
 window.i18n = {
@@ -22,6 +42,9 @@ window.i18n = {
     "OVERWRITE TRAINING": "GHI ĐÈ MẪU HUẤN LUYỆN",
     "ANSWER": "CÂU TRẢ LỜI",
     "SUBMIT": "GỬI",
+    "UPDATE": "CẬP NHẬT",
+    "SAVE": "LƯU",
+    "CANCEL": "HỦY",
     // Docs
     "Asky API Documentation": "Tài liệu API Asky",
     "Integrate Asky's code analysis capabilities into your applications": "Tích hợp khả năng phân tích mã nguồn của Asky vào ứng dụng của bạn",
@@ -39,12 +62,12 @@ window.i18n = {
     // Alerts
     "alert_load_error": "Lỗi tải dữ liệu từ Supabase.",
     "alert_select_subject": "Vui lòng chọn một Subject trước.",
-    "alert_overwrite_def_success": "Ghi đè Definition thành công!",
-    "alert_overwrite_train_success": "Ghi đè Training thành công!",
-    "alert_error_overwrite": "Lỗi khi ghi đè: ",
+    "alert_overwrite_def_success": "Lưu Definition thành công!",
+    "alert_overwrite_train_success": "Lưu Training thành công!",
+    "alert_error_overwrite": "Lỗi khi lưu: ",
     "alert_empty_question": "Vui lòng nhập câu hỏi vào ô Question.",
     "alert_empty_question_docs": "Vui lòng nhập câu hỏi.",
-    "prompt_password": "Vui lòng nhập mật khẩu để ghi đè:",
+    "prompt_password": "Vui lòng nhập mật khẩu để lưu:",
     "alert_wrong_password": "Mật khẩu không chính xác!"
   },
   en: {
@@ -59,6 +82,9 @@ window.i18n = {
     "OVERWRITE TRAINING": "OVERWRITE TRAINING",
     "ANSWER": "ANSWER",
     "SUBMIT": "SUBMIT",
+    "UPDATE": "UPDATE",
+    "SAVE": "SAVE",
+    "CANCEL": "CANCEL",
     // Docs
     "Asky API Documentation": "Asky API Documentation",
     "Integrate Asky's code analysis capabilities into your applications": "Integrate Asky's code analysis capabilities into your applications",
@@ -76,13 +102,13 @@ window.i18n = {
     // Alerts
     "alert_load_error": "Error loading data from Supabase.",
     "alert_select_subject": "Please select a Subject first.",
-    "alert_overwrite_def_success": "Overwrite Definition successful!",
-    "alert_overwrite_train_success": "Overwrite Training successful!",
-    "alert_error_overwrite": "Error during overwrite: ",
+    "alert_overwrite_def_success": "Save Definition successful!",
+    "alert_overwrite_train_success": "Save Training successful!",
+    "alert_error_overwrite": "Error during save: ",
     "alert_connection_error": "Connection error during update.",
     "alert_empty_question": "Please enter a question in the Question box.",
     "alert_empty_question_docs": "Please enter a question.",
-    "prompt_password": "Please enter the password to overwrite:",
+    "prompt_password": "Please enter the password to save:",
     "alert_wrong_password": "Incorrect password!"
   }
 };
@@ -139,6 +165,8 @@ function loadSubjectData() {
     .then((data) => {
       definitionInput.value = data.definition || '';
       trainingInput.value = data.training || '';
+      resetEditState('definition');
+      resetEditState('training');
     })
     .catch((error) => {
       console.error('Error fetching subject data:', error);
@@ -153,6 +181,45 @@ if (subjectSelect) {
   subjectSelect.addEventListener('change', loadSubjectData);
   // Trigger data load on page startup
   loadSubjectData();
+}
+
+// Edit/Cancel Event Listeners
+if (btnEditDef) {
+  btnEditDef.addEventListener('click', function () {
+    definitionInput.disabled = false;
+    definitionInput.setAttribute('data-original-val', definitionInput.value);
+    btnEditDef.classList.add('d-none');
+    if (groupDefActions) groupDefActions.classList.remove('d-none');
+  });
+}
+
+if (btnCancelDef) {
+  btnCancelDef.addEventListener('click', function () {
+    const originalVal = definitionInput.getAttribute('data-original-val');
+    if (originalVal !== null) {
+      definitionInput.value = originalVal;
+    }
+    resetEditState('definition');
+  });
+}
+
+if (btnEditTrain) {
+  btnEditTrain.addEventListener('click', function () {
+    trainingInput.disabled = false;
+    trainingInput.setAttribute('data-original-val', trainingInput.value);
+    btnEditTrain.classList.add('d-none');
+    if (groupTrainActions) groupTrainActions.classList.remove('d-none');
+  });
+}
+
+if (btnCancelTrain) {
+  btnCancelTrain.addEventListener('click', function () {
+    const originalVal = trainingInput.getAttribute('data-original-val');
+    if (originalVal !== null) {
+      trainingInput.value = originalVal;
+    }
+    resetEditState('training');
+  });
 }
 
 // 2. Overwrite Definition
@@ -188,6 +255,7 @@ if (btnOverwriteDef) {
       .then((result) => {
         if (result.message) {
           alert(window.i18n[window.currentLang].alert_overwrite_def_success);
+          resetEditState('definition');
         } else {
           alert(window.i18n[window.currentLang].alert_error_overwrite + (result.error || 'Unknown error'));
         }
@@ -235,6 +303,7 @@ if (btnOverwriteTrain) {
       .then((result) => {
         if (result.message) {
           alert(window.i18n[window.currentLang].alert_overwrite_train_success);
+          resetEditState('training');
         } else {
           alert(window.i18n[window.currentLang].alert_error_overwrite + (result.error || 'Unknown error'));
         }

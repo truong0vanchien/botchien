@@ -32,18 +32,26 @@
     <!-- DEFINITION -->
     <div class="card p-4 mb-4 shadow-sm d-flex flex-column" style="min-height: 250px;">
       <label for="definitionInput" class="form-label text-label fw-bold" data-i18n="DEFINITION">DEFINITION</label>
-      <textarea class="form-control mb-2 flex-grow-1" id="definitionInput" rows="5" placeholder="Definition will be loaded from Supabase..." data-i18n-placeholder="Definition will be loaded from Supabase..."></textarea>
+      <textarea class="form-control mb-2 flex-grow-1" id="definitionInput" rows="5" placeholder="Definition will be loaded from Supabase..." data-i18n-placeholder="Definition will be loaded from Supabase..." disabled></textarea>
       <div class="text-end mt-auto">
-        <button type="button" class="btn btn-warning btn-sm" id="btnOverwriteDef" data-i18n="OVERWRITE DEFINITION">OVERWRITE DEFINITION</button>
+        <button type="button" class="btn btn-warning btn-sm" id="btnEditDef" data-i18n="UPDATE">UPDATE</button>
+        <div id="groupDefActions" class="d-none d-inline-block">
+          <button type="button" class="btn btn-secondary btn-sm me-1" id="btnCancelDef" data-i18n="CANCEL">CANCEL</button>
+          <button type="button" class="btn btn-warning btn-sm" id="btnOverwriteDef" data-i18n="SAVE">SAVE</button>
+        </div>
       </div>
     </div>
     
     <!-- TRAINING -->
     <div class="card p-4 shadow-sm d-flex flex-column" style="min-height: 400px;">
       <label for="trainingInput" class="form-label text-label fw-bold" data-i18n="TRAINING">TRAINING</label>
-      <textarea class="form-control mb-2 flex-grow-1" id="trainingInput" rows="12" placeholder="Training data will be loaded from Supabase..." data-i18n-placeholder="Training data will be loaded from Supabase..."></textarea>
+      <textarea class="form-control mb-2 flex-grow-1" id="trainingInput" rows="12" placeholder="Training data will be loaded from Supabase..." data-i18n-placeholder="Training data will be loaded from Supabase..." disabled></textarea>
       <div class="text-end mt-auto">
-        <button type="button" class="btn btn-warning btn-sm" id="btnOverwriteTrain" data-i18n="OVERWRITE TRAINING">OVERWRITE TRAINING</button>
+        <button type="button" class="btn btn-warning btn-sm" id="btnEditTrain" data-i18n="UPDATE">UPDATE</button>
+        <div id="groupTrainActions" class="d-none d-inline-block">
+          <button type="button" class="btn btn-secondary btn-sm me-1" id="btnCancelTrain" data-i18n="CANCEL">CANCEL</button>
+          <button type="button" class="btn btn-warning btn-sm" id="btnOverwriteTrain" data-i18n="SAVE">SAVE</button>
+        </div>
       </div>
     </div>
   </div>
