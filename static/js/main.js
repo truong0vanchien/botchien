@@ -87,7 +87,7 @@ window.i18n = {
   }
 };
 
-window.currentLang = localStorage.getItem('lang') || 'vi';
+window.currentLang = localStorage.getItem('lang') || 'en';
 
 function setLanguage(lang) {
   window.currentLang = lang;

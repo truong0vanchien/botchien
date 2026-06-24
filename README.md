@@ -25,8 +25,8 @@ Asky is an intelligent web application designed to act as an AI-powered personal
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/truong0vanchien/chatbot.git
-   cd chatbot
+   git clone https://github.com/truong0vanchien/botchien.git
+   cd botchien
    ```
 
 2. **Set up virtual environment**:
