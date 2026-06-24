@@ -62,8 +62,8 @@ window.i18n = {
     // Alerts
     "alert_load_error": "Lỗi tải dữ liệu từ Supabase.",
     "alert_select_subject": "Vui lòng chọn một Subject trước.",
-    "alert_overwrite_def_success": "Lưu Definition thành công!",
-    "alert_overwrite_train_success": "Lưu Training thành công!",
+    "alert_overwrite_def_success": "Lưu Định nghĩa thành công!",
+    "alert_overwrite_train_success": "Lưu Mẫu huấn luyện thành công!",
     "alert_error_overwrite": "Lỗi khi lưu: ",
     "alert_empty_question": "Vui lòng nhập câu hỏi vào ô Question.",
     "alert_empty_question_docs": "Vui lòng nhập câu hỏi.",
