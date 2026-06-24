@@ -17,7 +17,7 @@ Asky is an intelligent web application designed to act as an AI-powered personal
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.11+
 - Supabase account and database table
 - DeepSeek API Key
 
@@ -56,6 +56,20 @@ Asky is an intelligent web application designed to act as an AI-powered personal
    python app.py
    ```
    Open your browser and navigate to `http://localhost:5000`.
+
+### Running with Docker
+
+Alternatively, you can build and run the application using Docker:
+
+1. **Build the Docker image**:
+   ```bash
+   docker build -t asky-assistant .
+   ```
+
+2. **Run the Docker container**:
+   ```bash
+   docker run -d -p 5000:5000 --env-file .env asky-assistant
+   ```
 
 ---
 
