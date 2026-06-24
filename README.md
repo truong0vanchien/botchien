@@ -1,5 +1,7 @@
 # Asky - AI Personal Assistant
 
+👉 **Live Demo:** [https://botchien.vercel.app/](https://botchien.vercel.app/)
+
 Asky is an intelligent web application designed to act as an AI-powered personal assistant. The application integrates with **Asky**, a virtual assistant agent powered by the **DeepSeek LLM** and configured through dynamic prompts (definitions and training examples) managed in a **Supabase database**.
 
 ---
@@ -56,20 +58,6 @@ Asky is an intelligent web application designed to act as an AI-powered personal
    python app.py
    ```
    Open your browser and navigate to `http://localhost:5000`.
-
-### Running with Docker
-
-Alternatively, you can build and run the application using Docker:
-
-1. **Build the Docker image**:
-   ```bash
-   docker build -t asky-assistant .
-   ```
-
-2. **Run the Docker container**:
-   ```bash
-   docker run -d -p 5000:5000 --env-file .env asky-assistant
-   ```
 
 ---
 
